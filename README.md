@@ -118,15 +118,18 @@ Study the code for Sample Program 2 until you understand it.
    I.e., give a process hierarchy diagram
    (as described in class and in your textbook).
 
-* Suggestion:
-  run the program several times with small input values (e.g.,  2, ..., 5).
+* Run the program several times with small input values (e.g.,  2, ..., 5).
   Examine the output carefully so that you understand *exactly* what is
-  happening.  
+  happening. Then increase the input value until you see the output get "mixed up".
 
-5. In the context of our classroom discussions on process state,
+5. What is the minimum input value that resulted in "interleaved" input? What platform are you using (Linux, MacOS, etc.)?
+   
+6. In the context of our classroom discussions on process state,
    process operations, and especially *process scheduling*,
    describe what you observed and try to explain what is happening to produce the
    observed results.
+
+
 
 ### Process Suspension and Termination
 
@@ -183,9 +186,9 @@ int main()
   making use of the pre-declared variables referenced in the `printf()`
   statement.
 
-6. provide the exact line of code that you inserted for the `wait()` system
+7. provide the exact line of code that you inserted for the `wait()` system
    call.
-7. who prints first, the child or the parent?  Why? Describe the interaction between 
+8. who prints first, the child or the parent?  Why? Describe the interaction between 
    the `exit()` function and the `wait()` system call.
    You may want to experiment by changing the value to better understand the
    interaction.
@@ -287,6 +290,10 @@ A good starting point is to copy the code in `sampleProgram4.c` to `simpleShell.
   pipeing (`|`), running background processes (`&`), or multiple commands per
   line (`;`),
   all of which a fully-featured shell would handle.
+
+10. Have your shell run `sampleProgram2` using an input large enough 
+   to produce interleaved output. Why does your shell's report get mixed up 
+  with the program output even though the shell `wait`s for the process? 
 
 
 ### Submission
