@@ -55,6 +55,7 @@ int main()
 {
     puts("Before fork");
     fork();
+    sleep(10);
     puts("After fork");
     return 0;
 }
@@ -166,11 +167,11 @@ int main()
     }
     else if (pid == 0) {
         printf("I am child PID %ld\n", (long) getpid());
-        /* insert an appropriate form of the exit() function here */
+        exit(42);
 
     }
     else {
-        /* insert an appropriate form of the wait() system call here */
+        child = wait(&status);
 
         printf("Child PID %ld terminated with return status %d\n", (long) child, status);
     }
